@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'task-manager-app-production-6495.up.railway.app',
+  baseURL: 'https://task-manager-app-production-6495.up.railway.app/api',
 })
 
 axiosInstance.interceptors.request.use((config) => {
