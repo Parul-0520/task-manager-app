@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.auth-root {
+  @apply min-h-screen flex bg-white font-sans;
+}
+
+.auth-left {
+  @apply hidden lg:flex flex-col w-[45%] bg-emerald-50 p-12 relative overflow-hidden;
+}
+
+.auth-left-orb-top {
+  @apply absolute -top-24 -left-24 w-96 h-96 bg-emerald-200/50 rounded-full blur-3xl;
+}
+
+.auth-left-orb-bot {
+  @apply absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-300/30 rounded-full blur-3xl;
+}
+
+.auth-right {
+  @apply flex-1 flex items-center justify-center p-6 bg-white;
+}
+
+.auth-card {
+  @apply w-full max-w-[400px] opacity-100;
+}
+
+.auth-pill {
+  @apply px-3 py-1 bg-emerald-100 text-emerald-700 text-[0.7rem] font-black uppercase tracking-wider rounded-full border border-emerald-200/50;
+}
+
+.auth-float-card {
+  @apply absolute left-12 bg-white/90 backdrop-blur-md p-3 rounded-2xl shadow-xl shadow-emerald-900/5 flex items-center gap-3 border border-white/50 z-20;
+}
+
+.navbar {
+  @apply bg-white border-b border-gray-200 px-8 h-16 flex items-center justify-center sticky top-0 z-50;
+}
+
+.navbar-inner {
+  @apply w-full max-w-[1200px] flex justify-between items-center;
+}
+
+.navbar-left, .navbar-right {
+  @apply flex items-center gap-8;
+}
+
+.navbar-brand-icon {
+  @apply w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-600/20;
+}
+
+.navbar-brand-name {
+  @apply font-black text-xl tracking-tight text-gray-900;
+}
+
+.page-root {
+  @apply min-h-screen bg-[#f9fafb];
+}
+
+.page-content {
+  @apply max-w-[1200px] mx-auto p-10;
+}
+
+.header-row {
+  @apply flex justify-between items-center mb-8;
+}
+
+.stat-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10;
+}
+
+.stat-card {
+  @apply bg-white p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md;
+}
+
+.project-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.kanban-grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6 items-start;
+}
+
+.card {
+  @apply bg-white rounded-2xl p-6 border border-gray-200 shadow-sm transition-all;
+}
+
+.task-card {
+  @apply bg-white p-4 rounded-xl shadow-sm border border-gray-100 mb-4 hover:shadow-md hover:border-emerald-200 transition-all cursor-grab active:cursor-grabbing;
+}
+
+.form-card {
+  @apply bg-white p-6 rounded-2xl shadow-xl border border-gray-100 mb-8 flex flex-col gap-4;
+}
+
+.field {
+  @apply flex flex-col gap-1.5;
+}
+
+.field-label {
+  @apply text-[0.85rem] font-bold text-gray-700 ml-0.5;
+}
+
+.field-input {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50/50 text-gray-900 transition-all outline-none focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold transition-all active:scale-[0.98] cursor-pointer border-none;
+}
+
+.btn-primary {
+  @apply bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-700;
+}
+
+.btn-danger {
+  @apply bg-red-50 text-red-600 hover:bg-red-100;
+}
+
+.error-box {
+  @apply p-3 bg-red-50 border border-red-100 text-red-600 text-sm font-medium rounded-xl mb-4;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
